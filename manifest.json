@@ -1,6 +1,6 @@
 {
     "name": "Simple Portfolio-PWA",
-    "short_name": "Portfolio-PWA",
+    "short_name": "Portfolio",
     "description": "Simple Portfolio-PWA",
     "start_url": "/index.html",
     "display": "standalone",
