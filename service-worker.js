@@ -1,6 +1,9 @@
 const CACHE_NAME = 'portfolio-pwa-v1'
 let urlsToCache = [
+    '/manifest.json',
     '/',
+    '/favicon.ico',
+    '/icon.png',
     '/index.html',
     '/src/components/nav.html',
     '/src/pages/about.html',
@@ -15,10 +18,10 @@ let urlsToCache = [
     '/assets/js/modules/page.js',
     '/assets/js/modules/project.js',
     '/assets/img/expo.png',
-    '/assets/img/fikri.jpng',
+    '/assets/img/fikri.png',
     '/assets/img/kutai.png',
     '/assets/img/marcomm.png',
-    '/assets/img/qiklan.png'
+    '/assets/img/qiklan.png',
 ]
 
 //Register Cache to Application

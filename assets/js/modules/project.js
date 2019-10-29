@@ -16,7 +16,7 @@ const loadProject = () => {
             <p>${project.title}</p>
           </div>
           <div class="card-action">
-            <a href="${project.url}">Lihat</a>
+            <a class="text-blue" href="${project.url}">Lihat</a>
           </div>
         </div>
         </div>
