@@ -1,5 +1,3 @@
-import loadProfile from './profile.js'
-
 let path = window.location.hash.substr(1)
 
 const loadPage = (path = 'home') => {
@@ -8,8 +6,9 @@ const loadPage = (path = 'home') => {
         if(xhr.readyState == 4){
             let element = document.querySelector('#body-content')
             if(xhr.status == 200){
-                if(path === 'home' || path == 'about') loadProfile()
                 element.innerHTML = xhr.responseText
+                let mediumContent = document.querySelector('#mediumContent').innerHTML
+                document.querySelector('#smallContent').innerHTML = mediumContent
             }else if(xhr.status == 404){
                 element.innerHTML = "<h1>Halaman Tidak Ditemukan</h1>"
             }else{
