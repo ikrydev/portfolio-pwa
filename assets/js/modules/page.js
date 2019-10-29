@@ -1,5 +1,7 @@
 import loadProject from './project.js'
 
+let path = window.location.hash.substr(1)
+
 const loadPage = (path = 'home') => {
     let xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {

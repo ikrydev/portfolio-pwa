@@ -24,5 +24,17 @@
     <div class="container" id="body-content"></div>
     <script src="assets/js/main.js" type="module"></script>
     <script src="assets/js/materialize.min.js"></script>
+    <script>
+        if("serviceWorker" in navigator){
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register('./service-worker.js')
+                    .then(() => console.log("Register Success"))
+                    .catch(() => console.log("Register Not Success"))
+            })
+        }else{
+            console.log("Service Worker it is not supported yet!")
+        }
+    </script>
 </body>
 </html>
