@@ -10,7 +10,7 @@ const loadProject = () => {
         <div class="col s12 m4">
         <div class="card">
           <div class="card-image">
-            <img src="${project.img}">
+            <img alt="${project.title}" src="${project.img}">
           </div>
           <div class="card-content">
             <p>${project.title}</p>
