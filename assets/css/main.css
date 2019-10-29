@@ -6,3 +6,8 @@ body{
 .m-50{
     margin-top: 50px;
 }
+
+.about span{
+    display: block;
+    margin-bottom: 15px;
+}
