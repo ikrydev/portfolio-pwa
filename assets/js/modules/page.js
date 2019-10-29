@@ -14,7 +14,7 @@ const loadPage = (path = 'home') => {
             }
         }
     }
-    xhr.open('GET',`pages/${path}.html`,true)
+    xhr.open('GET',`/src/pages/${path}.html`,true)
     xhr.send()
 }
 

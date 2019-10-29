@@ -34,7 +34,7 @@ const loadNav = () => {
             })
         })
     }
-    xhr.open('GET','nav.html',true)
+    xhr.open('GET','/src/components/nav.html',true)
     xhr.send()
 }
 
