@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0d47a1"/>
+    <title>Simple Portfolio PWA</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="blue darken-2" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo" id="logo-container">My Portfolio</a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+
+    <div class="container" id="body-content"></div>
+    <script src="assets/js/main.js" type="module"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    <script>
+        if("serviceWorker" in navigator){
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register('./service-worker.js')
+                    .then(() => console.log("Register Success"))
+                    .catch(() => console.log("Register Not Success"))
+            })
+        }else{
+            console.log("Service Worker it is not supported yet!")
+        }
+    </script>
+</body>
+</html>

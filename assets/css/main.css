@@ -1,0 +1,17 @@
+body{
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+.mt-50{
+    margin-top: 50px;
+}
+
+.about span{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.text-blue{
+    color: #0D47A1 !important;
+}

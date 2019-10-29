@@ -1,0 +1,16 @@
+{
+    "name": "Simple Portfolio-PWA",
+    "short_name": "Portfolio-PWA",
+    "description": "Simple Portfolio-PWA",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#82b1ff",
+    "theme_color": "#0d47a1",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
