@@ -4,8 +4,8 @@
     "description": "Simple Portfolio-PWA",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#00897B",
-    "theme_color": "#00897B",
+    "background_color": "#82b1ff",
+    "theme_color": "#0d47a1",
     "icons": [
         {
             "src": "icon.png",
