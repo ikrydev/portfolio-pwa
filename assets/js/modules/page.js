@@ -1,4 +1,4 @@
-let path = window.location.hash.substr(1)
+import loadProject from './project.js'
 
 const loadPage = (path = 'home') => {
     let xhr = new XMLHttpRequest()
@@ -7,8 +7,9 @@ const loadPage = (path = 'home') => {
             let element = document.querySelector('#body-content')
             if(xhr.status == 200){
                 element.innerHTML = xhr.responseText
-                let mediumContent = document.querySelector('#mediumContent').innerHTML
-                document.querySelector('#smallContent').innerHTML = mediumContent
+                let mediumContent = document.querySelector('#mediumContent')
+                if(mediumContent) document.querySelector('#smallContent').innerHTML = mediumContent.innerHTML
+                if(path === 'project') loadProject()
             }else if(xhr.status == 404){
                 element.innerHTML = "<h1>Halaman Tidak Ditemukan</h1>"
             }else{
