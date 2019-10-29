@@ -7,9 +7,9 @@
 ### Ongoing Features
 - [x] Page Home
 - [x] Page About
-- [ ] Page Contact
-- [ ] Page Project
-- [ ] PWA Module
+- [x] Page Contact
+- [x] Page Project
+- [x] PWA Module
 
 * * *
 
