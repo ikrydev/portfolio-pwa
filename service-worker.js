@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-pwa-v1'
+const CACHE_NAME = 'portfolio-pwa-v1.2'
 let urlsToCache = [
     '/manifest.json',
     '/',
@@ -24,7 +24,7 @@ let urlsToCache = [
     '/assets/img/qiklan.png',
 ]
 
-//Register Cache to Application
+//Install Service Worker
 self.addEventListener('install', event => {
     event.waitUntil(
         caches
@@ -33,32 +33,25 @@ self.addEventListener('install', event => {
     )
 })
 
-//Using Cache
+//Fetch Service Worker
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches
             .match(event.request, { cacheName: CACHE_NAME })
             .then(response => {
-                if(response){
-                    console.log(`Service Worker: Gunakan aset dari cache: ${response.url}`)
-                    return response
-                }
-                console.log(`ServiceWorker: Memuat aset dari server: ${event.request.url}`)
+                if(response) return response
                 return fetch(event.request)
             })
     )
 })
 
-//Delete old Cache
+//Delete Old Service Worker
 self.addEventListener('activate', event => {
     event.waitUntil(
         caches.keys()
                 .then(cacheNames => Promise.all(
                     cacheNames.map(cacheName => {
-                        if(cacheName != CACHE_NAME) {
-                            console.log(`ServiceWorker: cache ${cacheName} dihapus`)
-                            return caches.delete(cacheName)
-                        }
+                        if(cacheName != CACHE_NAME) return caches.delete(cacheName)
                     })
                 ))
     )
